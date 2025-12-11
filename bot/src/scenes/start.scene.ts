@@ -19,7 +19,7 @@ export function setupStartScene(bot: Bot) {
         .text('ℹ️ Инфо', 'go_to_info')
         .text('🚀 Начать', 'go_to_begin')
         .row()
-        // .webApp('📱 Открыть WebApp', process.env.NEXT_PUBLIC_WEBAPP_URL || 'http://localhost:3000');
+        .webApp('📱 Открыть WebApp', process.env.NEXT_PUBLIC_WEBAPP_URL || 'http://localhost:3000');
 
       await ctx.reply(
         `👋 Привет, ${user.first_name || 'друг'}!\n\n` +
@@ -86,7 +86,7 @@ export function setupStartScene(bot: Bot) {
       .text('ℹ️ Инфо', 'go_to_info')
       .text('🚀 Начать', 'go_to_begin')
       .row()
-      // .webApp('📱 Открыть WebApp', process.env.NEXT_PUBLIC_WEBAPP_URL || 'http://localhost:3000');
+      .webApp('📱 Открыть WebApp', process.env.NEXT_PUBLIC_WEBAPP_URL || 'http://localhost:3000');
 
     await ctx.editMessageText(
       `👋 Привет, ${user.first_name || 'друг'}!\n\n` +

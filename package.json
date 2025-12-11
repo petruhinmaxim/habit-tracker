@@ -16,8 +16,8 @@
     "build:webapp": "cd webapp && npm run build",
     "db:generate": "cd bot && npm run db:generate",
     "db:migrate": "cd bot && npm run db:migrate",
-    "docker:up": "docker-compose up -d",
-    "docker:down": "docker-compose down"
+    "docker:up": "docker-compose -f configs/docker-compose.yml up -d",
+    "docker:down": "docker-compose -f configs/docker-compose.yml down"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"

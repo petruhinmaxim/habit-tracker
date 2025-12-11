@@ -1,4 +1,13 @@
 import winston from 'winston';
+import { join } from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Path to logs directory in project root
+const logsDir = join(__dirname, '../../../logs');
 
 const logger = winston.createLogger({
   level: process.env.LOG_LEVEL || 'info',
@@ -9,8 +18,8 @@ const logger = winston.createLogger({
   ),
   defaultMeta: { service: 'habit-tracker-bot' },
   transports: [
-    new winston.transports.File({ filename: 'error.log', level: 'error' }),
-    new winston.transports.File({ filename: 'combined.log' }),
+    new winston.transports.File({ filename: join(logsDir, 'error.log'), level: 'error' }),
+    new winston.transports.File({ filename: join(logsDir, 'combined.log') }),
   ],
 });
 

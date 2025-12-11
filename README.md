@@ -19,7 +19,9 @@
 habit-tracker/
 ├── bot/              # Telegram бот
 ├── webapp/           # Next.js веб-приложение
-├── docker-compose.yml
+├── configs/          # Конфигурационные файлы
+│   ├── docker-compose.yml
+│   └── drizzle.config.ts
 └── package.json
 ```
 
@@ -140,7 +142,9 @@ habit-tracker/
 │   ├── app/               # Next.js App Router
 │   ├── public/            # Статические файлы
 │   └── package.json
-├── docker-compose.yml      # Docker конфигурация
+├── configs/                # Конфигурационные файлы
+│   ├── docker-compose.yml  # Docker конфигурация
+│   └── drizzle.config.ts   # Drizzle ORM конфигурация
 └── package.json           # Root package.json
 ```
 

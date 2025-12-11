@@ -10,8 +10,8 @@ const __dirname = dirname(__filename);
 dotenv.config({ path: join(__dirname, '../.env') });
 
 export default {
-  schema: './src/db/postgres/schema.ts',
-  out: './drizzle',
+  schema: '../bot/src/db/postgres/schema.ts',
+  out: '../bot/drizzle',
   driver: 'pg',
   dbCredentials: {
     connectionString: process.env.DATABASE_URL!,
